@@ -52,7 +52,7 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
       player001.textContent =
         Number(player001.textContent) + currentScorePlayer;
       document.getElementById('current--0').textContent = 0;
-      if (Number(player001.textContent) >= 10) {
+      if (Number(player001.textContent) >= 100) {
         player001Active.classList.add('player--winner');
         player001Active.classList.remove('player--active');
         player002Active.classList.remove('player--active');
@@ -63,7 +63,7 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
       player002.textContent =
         Number(player002.textContent) + currentScorePlayer;
       document.getElementById('current--1').textContent = 0;
-      if (Number(player002.textContent) >= 10) {
+      if (Number(player002.textContent) >= 100) {
         player002Active.classList.add('player--winner');
         player002Active.classList.remove('player--active');
         player001Active.classList.remove('player--active');
