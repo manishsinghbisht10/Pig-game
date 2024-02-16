@@ -89,6 +89,8 @@ document.querySelector('.btn--new').addEventListener('click', function () {
   if (!player001Active.classList.contains('player--active'))
     player001Active.classList.add('player--active');
   document.querySelector('.dice').classList.add('hidden');
+  player001Active.classList.remove('player--winner');
+  player002Active.classList.remove('player--winner');
   currentScorePlayer = 0;
   switchPlayer = 1;
   isPlaying = true;
