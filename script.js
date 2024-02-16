@@ -60,6 +60,8 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
         document.querySelector('.dice').classList.add('hidden');
       }
     } else {
+      player001Active.classList.toggle('player--active');
+      player002Active.classList.toggle('player--active');
       player002.textContent =
         Number(player002.textContent) + currentScorePlayer;
       document.getElementById('current--1').textContent = 0;
@@ -74,4 +76,20 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
     currentScorePlayer = 0;
     switchPlayer++;
   }
+});
+
+document.querySelector('.btn--new').addEventListener('click', function () {
+  console.log('hello');
+  player001.textContent = 0;
+  player002.textContent = 0;
+  document.getElementById('current--0').textContent = 0;
+  document.getElementById('current--1').textContent = 0;
+  if (player002Active.classList.contains('player--active'))
+    player002Active.classList.remove('player--active');
+  if (!player001Active.classList.contains('player--active'))
+    player001Active.classList.add('player--active');
+  document.querySelector('.dice').classList.add('hidden');
+  currentScorePlayer = 0;
+  switchPlayer = 1;
+  isPlaying = true;
 });
